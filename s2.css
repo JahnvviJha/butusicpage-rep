@@ -23,6 +23,7 @@ body {
   overflow: hidden;
   display: grid;
   grid-template-columns: 1.05fr 1.05fr 0.95fr 1.2fr;
+  /* grid-template-columns: 0.85fr 1.05fr 0.95fr 1.2fr; */
   grid-template-rows: 10% calc(30% - 20px) 30% 10% calc(20% - 30px);
   gap: 10px;
 }
@@ -225,11 +226,15 @@ body {
   width: 100%;
 }
 .logo-section h1 {
-  font-size: clamp(3rem, 6vw, 7rem);
+  /* font-size: clamp(3rem, 6vw, 7rem); */
+  font-size: 8.85vw;
   line-height: 0.9;
   font-family: "Six Caps", sans-serif;
   font-weight: 400;
   font-style: normal;
+  display: inline-block;
+  transform: scaleX(1.5);
+  transform-origin: left;
 }
 .logo-section p {
   color: #b95eff;
