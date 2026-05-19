@@ -4,8 +4,6 @@
   box-sizing: border-box;
 }
 
-/* important property always add */
-
 html,
 body {
   width: 100vw;
@@ -20,21 +18,16 @@ body {
 }
 
 .container {
-  /* added this */
-  /* ------------------------ */
   height: 100%;
   width: 100%;
   overflow: hidden;
-  /* ---------------------- */
   display: grid;
-
   grid-template-columns: 1.05fr 1.05fr 0.95fr 1.2fr;
   grid-template-rows: 10% calc(30% - 20px) 30% 10% calc(20% - 30px);
-  /* border: solid transparent; */
   gap: 10px;
 }
+
 .card {
-  /* border: 2px solid white; */
   background: #0c0c0c;
   border-radius: 32px;
   overflow: hidden;
@@ -42,7 +35,7 @@ body {
   box-shadow:
     inset 0 0 0 1px rgba(255, 255, 255, 0.03),
     0 10px 30px rgba(0, 0, 0, 0.5);
-    height: 100%;
+  height: 100%;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -92,65 +85,55 @@ body {
   grid-row: 4/6;
 }
 
-/* ............ */
 /* IMAGE CARDS */
-.image-card{
-    padding: 20px;
+.image-card {
+  padding: 20px;
 }
-.green-jacket{
-    background-color:#b95eff;
-    /* border: solid; */
-    width: 100%;
-    height: 100%;
-    border-radius: 32px;
+.green-jacket {
+  background-color: #b95eff;
+  width: 100%;
+  height: 100%;
+  border-radius: 32px;
 }
-.green-jacket img{
-    border-radius: 32px;
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    /* border: solid; */
-    
+.green-jacket img {
+  border-radius: 32px;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 
 .right-img {
-    padding: 20px;
+  padding: 20px;
 }
 
-.purple-jacket{
-    background-color: #dfff45;
-    /* border: solid; */
-    border-radius: 32px;
-    width: 100%;
-    height: 100%;
+.purple-jacket {
+  background-color: #dfff45;
+  border-radius: 32px;
+  width: 100%;
+  height: 100%;
 }
 .purple-jacket img {
   width: 100%;
- 
   object-fit: cover;
   border-radius: 32px;
 }
 
 /* CIRCLE CARD */
-
 .circle-card {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
 .circle-card img {
   width: 125%;
 }
 
 /* MENU CARD */
-
 .menu-card {
   padding: 35px;
   justify-content: flex-start;
   align-items: flex-start;
 }
-
 .menu-card ul {
   list-style: none;
   display: flex;
@@ -158,7 +141,6 @@ body {
   gap: 28px;
   width: 100%;
 }
-
 .menu-card li {
   font-size: 28px;
   color: #d1d1d1;
@@ -167,14 +149,12 @@ body {
   align-items: center;
   gap: 14px;
 }
-
 .menu-card .active {
   background: #2f2f2f;
   padding: 14px 20px;
   border-radius: 40px;
   justify-content: space-between;
 }
-
 .menu-card .active::after {
   content: '';
   width: 14px;
@@ -183,7 +163,6 @@ body {
   background: #b95eff;
   border-radius: 50%;
 }
-
 .menu-icon {
   display: flex;
   align-items: center;
@@ -199,39 +178,25 @@ body {
 }
 
 /* TOP PURPLE */
-
-/* .top-purple img{ */
-    /* this will invert the color of images so they become visible ,you should remove this before you add new images with white color if you do  */
-    /* filter: invert(1); */
-/* } */
-.right-info img{
-  filter: brightness(0) invert(1)
+.right-info img {
+  filter: brightness(0) invert(1);
 }
-
-.left-info img{
+.left-info img {
   background: white;
   border-radius: 50%;
 }
 .top-purple {
   background: linear-gradient(135deg, #b155ff, #7f39fb);
-
   padding: 25px;
-
   display: flex;
-
   justify-content: center;
-
   align-items: center;
 }
-
 .left-info,
 .right-info {
   width: 45%;
-
   display: flex;
-
   align-items: center;
-
   gap: 12px;
 }
 .left-info img {
@@ -243,109 +208,71 @@ body {
   width: 70px;
   height: 50px;
 }
-/* .top-purple img { */
-  /* width: 40%; */
-  /* background: white;
-  border-radius: 50%; */
-/* } */
 
 /* LEFT BIG CARD */
-
 .left-big {
   width: 100%;
-  height: 100%;  
+  height: 100%;
   border: 2px solid #dfff45;
-
   padding: 20px;
-
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  align-items: flex-start; /* ← THIS is the fix */
 }
 
-.logo-section{
-    width: 100%;
-    /* border: solid; */
+.logo-section {
+  width: 100%;
 }
 .logo-section h1 {
-    /* border: solid; */
-  /* font-size: clamp(1.5rem, 4vw, 5rem); */
-
-
   font-size: clamp(3rem, 6vw, 7rem);
-
-
   line-height: 0.9;
-
   font-family: "Six Caps", sans-serif;
   font-weight: 400;
   font-style: normal;
-
-  /* font-weight: 900; */
 }
-
 .logo-section p {
-    /* border: solid; */
   color: #b95eff;
-
   margin-top: 20px;
-
   letter-spacing: 4px;
 }
 
 .left-big hr {
-  /* border: none; */
-    width: 100%;
+  width: 100%;
   height: 0.5px;
-
   background: #3d3d3d;
 }
 
 /* BITCOIN */
-
 .bitcoin-box {
-    width: 100%;
-    /* border: solid; */
+  width: 100%;
   display: flex;
   align-items: center;
-
   gap: 20px;
 }
-
 .bIcon {
   width: 70px;
   height: 70px;
-
   background: #dfff45;
-
   color: black;
-
   border-radius: 18px;
-
   display: flex;
-
   justify-content: center;
   align-items: center;
-
   font-size: 40px;
-
   font-weight: bold;
 }
-
-.bitcoin-text  {
-    display: flex;
-    flex-direction: column;
+.bitcoin-text {
+  display: flex;
+  flex-direction: column;
   font-size: 1.5rem;
-
   line-height: 1.4;
 }
 
 /* BARCODE */
-
 .barcode {
   width: 100%;
   height: 60px;
-
   background: repeating-linear-gradient(
     90deg,
     white 0px,
@@ -356,51 +283,37 @@ body {
 }
 
 /* EXHIBITION CARD */
-
 .exhibition-card {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    gap: 10%;
-  /* padding: 30px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  gap: 10%;
 }
-
 .location-row {
   display: flex;
-
   align-items: center;
-
   gap: 15px;
-
   color: #a1a1a1;
-
 }
-
 .exhibition-card .ex-text {
   display: flex;
   flex-direction: column;
   gap: 10px;
   font-size: x-large;
 }
-
 .exhibition-card p {
   color: #b3b3b3;
 }
 .lIcon {
   width: 40px;
   height: 40px;
-
   background: #dfff45;
-
   color: black;
-
   border-radius: 50%;
-
   display: flex;
-
   justify-content: center;
   align-items: center;
 }
@@ -410,7 +323,6 @@ body {
 }
 
 /* RIGHT IMAGE */
-
 .right-img img {
   width: 100%;
   height: 100%;
@@ -418,113 +330,80 @@ body {
 }
 
 /* AWARDS */
-
 .awards-card {
   display: flex;
-
   justify-content: space-evenly;
-
   align-items: center;
 }
-
 .awards-card img {
   width: 60px;
 }
 
 /* QR CARD */
-
 .qr-card {
   background: #dfff45;
-
   color: black;
-
   padding: 25px;
-
   display: flex;
-
   align-items: center;
-
   gap: 20px;
 }
-
 .qr {
   width: 30%;
 }
-.qr img{
-    width: 100%;
+.qr img {
+  width: 100%;
 }
-
 .qr-content h3 {
   margin-bottom: 10px;
 }
 
 /* RATING CARD */
-
 .rating-card {
-    /* height widht kaha hai eska */
-    height: 100%;
-    width: 100%;
+  height: 100%;
+  width: 100%;
   background: #f4f4f4;
-
   color: black;
-
   padding: 20px;
-
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
-
-.rating-left{
-    height: 100%;
-    width: 60%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+.rating-left {
+  height: 100%;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 .rating-left h2 {
-  font-size: clamp(1.5rem, 3vw, 4rem);;
+  font-size: clamp(1.5rem, 3vw, 4rem);
   line-height: 1;
 }
-
 .rating-left p {
   color: #555;
 }
-
 .rating-right {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    /* border: solid black; */
-    height: 100%;
-    width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+  width: 40%;
   text-align: right;
-}
-
-.rating-right {
   font-size: 3rem;
-    font-weight: bolder;
+  font-weight: bolder;
   line-height: 1;
 }
-
 .ratingStars {
   color: #dfff45;
-
   font-size: 35px;
-
 }
-
 .rating-right button {
   border: none;
-
   background: #9c52ff;
-
   color: white;
-
   padding: 18px 28px;
-
   border-radius: 15px;
-
   font-size: 18px;
 }
